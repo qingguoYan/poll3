@@ -45,7 +45,7 @@ public class Swagger2 {
 	
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder()
-				.title("yqg，课调系统API")
+				.title("智慧校园课调系统")
 				.description("谷歌搜索引擎-请翻墙进入，http://www.google.com")
 				.termsOfServiceUrl("http://www.google.com")
 				.version("1.0")
