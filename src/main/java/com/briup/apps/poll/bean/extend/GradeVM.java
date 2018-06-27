@@ -1,15 +1,12 @@
 package com.briup.apps.poll.bean.extend;
 
-import com.briup.apps.poll.bean.Grade;
-import com.briup.apps.poll.bean.User;
+import com.briup.apps.poll.bean.School;
 
-public class ClazzVM {
+public class GradeVM {
 	private Long id;
 	private String name;
 	private String description;
-	
-	private Grade grade;
-	private User charge;
+	private School school;
 	public Long getId() {
 		return id;
 	}
@@ -28,17 +25,11 @@ public class ClazzVM {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public Grade getGrade() {
-		return grade;
+	public School getSchool() {
+		return school;
 	}
-	public void setGrade(Grade grade) {
-		this.grade = grade;
+	public void setSchool(School school) {
+		this.school = school;
 	}
-	public User getCharge() {
-		return charge;
-	}
-	public void setCharge(User charge) {
-		this.charge = charge;
-	}
-	
+
 }
