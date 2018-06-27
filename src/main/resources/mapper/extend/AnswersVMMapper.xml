@@ -4,7 +4,7 @@
  <select id="selectAll" resultMap="AnswersVMResultMap">
     select * from poll_answers
     </select>
-    <resultMap type="com.briup.apps.poll.bean.extend.AnswerVM" id="AnswerVMResultMap">
+    <resultMap type="com.briup.apps.poll.bean.extend.AnswersVM" id="AnswersVMResultMap">
     <id column="id" property="id"/>
     <result column="selections" property="selections"/>
     <result column="checkes" property="checkes"/>
