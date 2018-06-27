@@ -1,4 +1,4 @@
-package com.briup.apps.poll.web.controll;
+package com.briup.apps.poll.web.controller;
 
 import java.util.List;
 
