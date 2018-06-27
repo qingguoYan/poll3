@@ -6,7 +6,7 @@ public class AnswersVM {
 
 	private Long id;
 	private String selections;
-	private String checks;
+	private String checkes;
 	private String content;
 	private Survey survey;
 	public Long getId() {
@@ -21,11 +21,11 @@ public class AnswersVM {
 	public void setSelections(String selections) {
 		this.selections = selections;
 	}
-	public String getChecks() {
-		return checks;
+	public String getCheckes() {
+		return checkes;
 	}
-	public void setChecks(String checks) {
-		this.checks = checks;
+	public void setCheceks(String checkes) {
+		this.checkes = checkes;
 	}
 	public String getContent() {
 		return content;
