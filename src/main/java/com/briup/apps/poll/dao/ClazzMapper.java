@@ -2,6 +2,7 @@ package com.briup.apps.poll.dao;
 
 import com.briup.apps.poll.bean.Clazz;
 import com.briup.apps.poll.bean.ClazzExample;
+
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
@@ -67,6 +68,11 @@ public interface ClazzMapper {
      * This method corresponds to the database table poll_clazz
      *
      * @mbg.generated Wed Jun 27 08:43:11 CST 2018
+     */
+    /**
+     * 加了个VM
+     * @param id
+     * @return
      */
     Clazz selectByPrimaryKey(Long id);
 

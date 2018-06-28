@@ -12,14 +12,11 @@ public interface IClazzService {
 	List<Clazz> findAll() throws Exception;
 	List<ClazzVM> findAllClazzVM() throws Exception;
 	void saveOrUpdate(ClazzVM clazzVM) throws Exception;
-	
-	//暂未实现
-	Clazz selectById(long id)throws Exception;
-	//ClazzVM SelectByIdClazz(long id)throws Exception;
+	ClazzVM selectById(long id)throws Exception;
 	/*
 	 *关键字查询
 	 */
-	List<Clazz>query(String keywords) throws Exception;
+	List<ClazzVM> query(String keywords) throws Exception;
 	/*
 	 * 
 	 */

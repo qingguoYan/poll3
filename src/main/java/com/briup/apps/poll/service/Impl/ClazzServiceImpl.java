@@ -27,17 +27,17 @@ public class ClazzServiceImpl implements IClazzService{
 	}
 
 	@Override
-	public Clazz selectById(long id) throws Exception {
+	public ClazzVM selectById(long id) throws Exception {
 		// TODO Auto-generated method stub
-		return clazzMapper.selectByPrimaryKey(id);
+		return clazzVMMapper.selectByPrimaryKey(id);
 	}
 
 	@Override
-	public List<Clazz> query(String keywords) throws Exception {
+	public List<ClazzVM> query(String keywords) throws Exception {
 		// TODO Auto-generated method stub
-		ClazzExample example=new ClazzExample();
-		example.createCriteria().andNameLike(keywords);
-		return clazzMapper.selectByExampleWithBLOBs(example);
+		//ClazzExample example=new ClazzExample();
+		//example.createCriteria().andNameLike("%"+keywords+"%");
+		return clazzVMMapper.selectByExampleWithBLOBs(keywords);
 	}
 
 	@Override
@@ -68,10 +68,4 @@ public class ClazzServiceImpl implements IClazzService{
 	public List<ClazzVM> findAllClazzVM() throws Exception {
 		return clazzVMMapper.SelectAll();
 	}
-
-	
-
-
-	
-
 }

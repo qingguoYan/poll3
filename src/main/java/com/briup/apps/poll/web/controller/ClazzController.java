@@ -52,10 +52,10 @@ public class ClazzController {
 			return MsgResponse.error(e.getMessage());
 		}
 	}
-	@GetMapping("findByIdClazz")
-	public MsgResponse findByIClazz(@RequestParam long id){
+	@GetMapping("findByIdClazzVM")
+	public MsgResponse findByIdClazzVM(@RequestParam long id){
 		try {
-			Clazz clazzVM = clazzService.selectById(id);
+			ClazzVM clazzVM = clazzService.selectById(id);
 			return MsgResponse.success("ID："+id+"find success",clazzVM);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -66,8 +66,8 @@ public class ClazzController {
 	@GetMapping("findKeyWords")
 	public MsgResponse findKeyWords(String keywords){
 		try {
-			List<Clazz> list=clazzService.query(keywords);
-			return MsgResponse.success("find key words:"+keywords,list);
+			List<ClazzVM> list=clazzService.query(keywords);
+			return MsgResponse.success("find key words:",list);
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
