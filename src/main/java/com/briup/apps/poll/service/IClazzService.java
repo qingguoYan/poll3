@@ -10,19 +10,17 @@ public interface IClazzService {
 	 *查询所有 
 	 */
 	List<Clazz> findAll() throws Exception;
-	/*
-	 * ID查询
-	 */
 	List<ClazzVM> findAllClazzVM() throws Exception;
-	Clazz findById(long id)throws Exception;
+	void saveOrUpdate(ClazzVM clazzVM) throws Exception;
+	ClazzVM selectById(long id)throws Exception;
 	/*
 	 *关键字查询
 	 */
-	List<Clazz>query(String keywords) throws Exception;
+	List<ClazzVM> query(String keywords) throws Exception;
 	/*
 	 * 
 	 */
-	void saveOrUpdate(Clazz clazz) throws Exception;
+	
 	void deleteById(long id)throws Exception;
 	void batchDelete(List<Long> ids)throws Exception;
 

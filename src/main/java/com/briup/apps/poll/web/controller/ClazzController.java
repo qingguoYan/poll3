@@ -52,11 +52,11 @@ public class ClazzController {
 			return MsgResponse.error(e.getMessage());
 		}
 	}
-	@GetMapping("findByIdClazz")
-	public MsgResponse findByIClazz(@RequestParam long id){
+	@GetMapping("findByIdClazzVM")
+	public MsgResponse findByIdClazzVM(@RequestParam long id){
 		try {
-			Clazz clazz = clazzService.findById(id);
-			return MsgResponse.success("ID："+id+"find success",clazz);
+			ClazzVM clazzVM = clazzService.selectById(id);
+			return MsgResponse.success("ID："+id+"find success",clazzVM);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return MsgResponse.error(e.getMessage());
@@ -66,8 +66,8 @@ public class ClazzController {
 	@GetMapping("findKeyWords")
 	public MsgResponse findKeyWords(String keywords){
 		try {
-			List<Clazz> list=clazzService.query(keywords);
-			return MsgResponse.success("find key words:"+keywords,list);
+			List<ClazzVM> list=clazzService.query(keywords);
+			return MsgResponse.success("find key words:",list);
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
@@ -76,12 +76,11 @@ public class ClazzController {
 		
 	}
 	//void saveOrUpdate(Clazz clazz) throws Exception;
-	@PostMapping("saveorUpdateClazz")
-	public MsgResponse saveorUpdateClazz(Clazz clazz){
+	@PostMapping("saveorUpdateClazzVM")
+	public MsgResponse saveorUpdateClazzVM(ClazzVM clazzVM){
 		try {
-			clazzService.saveOrUpdate(clazz);
-			
-			return MsgResponse.success("更改数据成功",clazz);
+			clazzService.saveOrUpdate(clazzVM);
+			return MsgResponse.success("更改数据成功",clazzVM);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return MsgResponse.error(e.getMessage());

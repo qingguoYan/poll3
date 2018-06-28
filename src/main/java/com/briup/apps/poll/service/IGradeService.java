@@ -16,11 +16,11 @@ public interface IGradeService {
 	 * ID查询
 	 */
 	List<GradeVM> findAllGradeVM() throws Exception;
-	Grade findById(long id)throws Exception;
+	GradeVM findById(long id)throws Exception;
 	/*
 	 *关键字查询
 	 */
-	List<Grade>query(String keywords) throws Exception;
+	List<GradeVM> query(String keywords) throws Exception;
 	/*
 	 * 
 	 */

@@ -6,5 +6,20 @@ import com.briup.apps.poll.bean.extend.ClazzVM;
 
 public interface ClazzVMMapper {
 	List<ClazzVM> SelectAll();
-	ClazzVM SelectByIdClazz();
+    int insert(ClazzVM record);
+    int updateByPrimaryKeyWithBLOBs(ClazzVM  record);
+
+
+
+	ClazzVM selectByPrimaryKey(long id);
+
+
+
+	List<ClazzVM> selectByExampleWithBLOBs(String keywords);
+
+
+
+	//List<ClazzVM> selectByExampleWithBLOBs(ClazzExample example);
+    
+
 }

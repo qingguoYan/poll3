@@ -49,7 +49,7 @@ public class GradeController {
 	@GetMapping("findByIdGrade")
 	public MsgResponse findByIdGrade(@RequestParam long id){
 		try {
-			Grade grade=gradeService.findById(id);
+			GradeVM grade=gradeService.findById(id);
 			return MsgResponse.success("成功查询ID为："+id,grade);
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -61,7 +61,7 @@ public class GradeController {
 	@GetMapping("findKeyWords")
 	public MsgResponse findKeyWords(String keywords){
 		try {
-			List<Grade> list=gradeService.query(keywords);
+			List<GradeVM> list=gradeService.query(keywords);
 			return MsgResponse.success("find key words:"+keywords,list);
 		} catch (Exception e) {
 			// TODO: handle exception

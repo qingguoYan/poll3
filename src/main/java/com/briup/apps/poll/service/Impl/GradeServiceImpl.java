@@ -27,17 +27,17 @@ public class GradeServiceImpl implements IGradeService{
 	}
 
 	@Override
-	public Grade findById(long id) throws Exception {
+	public GradeVM findById(long id) throws Exception {
 		// TODO Auto-generated method stub
-		return gradeMapper.selectByPrimaryKey(id);
+		return gradeVMMapper.selectByPrimaryKey(id);
 	}
 
 	@Override
-	public List<Grade> query(String keywords) throws Exception {
+	public List<GradeVM> query(String keywords) throws Exception {
 		// TODO Auto-generated method stub
-		GradeExample example=new GradeExample();
-		example.createCriteria().andNameLike(keywords);
-		return gradeMapper.selectByExampleWithBLOBs(example);
+		//GradeExample example=new GradeExample();
+		//example.createCriteria().andNameLike(keywords);
+		return gradeVMMapper.selectByExampleWithBLOBs(keywords);
 	}
 
 	@Override

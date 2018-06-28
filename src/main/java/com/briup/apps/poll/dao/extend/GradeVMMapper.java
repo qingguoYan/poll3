@@ -6,4 +6,9 @@ import com.briup.apps.poll.bean.extend.GradeVM;
 
 public interface GradeVMMapper {
 	List<GradeVM> SelectAll();
+
+	GradeVM selectByPrimaryKey(long id);
+
+	List<GradeVM> selectByExampleWithBLOBs(String keywords);
+	
 }
