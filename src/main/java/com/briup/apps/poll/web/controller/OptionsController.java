@@ -8,9 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.briup.apps.poll.bean.Options;
-import com.briup.apps.poll.bean.Question;
 import com.briup.apps.poll.service.IOptionsService;
 import com.briup.apps.poll.util.MsgResponse;
 
