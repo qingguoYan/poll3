@@ -55,8 +55,8 @@ public class ClazzController {
 	@GetMapping("findByIdClazz")
 	public MsgResponse findByIClazz(@RequestParam long id){
 		try {
-			Clazz clazz = clazzService.findById(id);
-			return MsgResponse.success("ID："+id+"find success",clazz);
+			Clazz clazzVM = clazzService.selectById(id);
+			return MsgResponse.success("ID："+id+"find success",clazzVM);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return MsgResponse.error(e.getMessage());
@@ -76,12 +76,11 @@ public class ClazzController {
 		
 	}
 	//void saveOrUpdate(Clazz clazz) throws Exception;
-	@PostMapping("saveorUpdateClazz")
-	public MsgResponse saveorUpdateClazz(Clazz clazz){
+	@PostMapping("saveorUpdateClazzVM")
+	public MsgResponse saveorUpdateClazzVM(ClazzVM clazzVM){
 		try {
-			clazzService.saveOrUpdate(clazz);
-			
-			return MsgResponse.success("更改数据成功",clazz);
+			clazzService.saveOrUpdate(clazzVM);
+			return MsgResponse.success("更改数据成功",clazzVM);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return MsgResponse.error(e.getMessage());

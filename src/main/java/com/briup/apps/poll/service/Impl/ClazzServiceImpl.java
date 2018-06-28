@@ -27,7 +27,7 @@ public class ClazzServiceImpl implements IClazzService{
 	}
 
 	@Override
-	public Clazz findById(long id) throws Exception {
+	public Clazz selectById(long id) throws Exception {
 		// TODO Auto-generated method stub
 		return clazzMapper.selectByPrimaryKey(id);
 	}
@@ -41,12 +41,12 @@ public class ClazzServiceImpl implements IClazzService{
 	}
 
 	@Override
-	public void saveOrUpdate(Clazz clazz) throws Exception {
+	public void saveOrUpdate(ClazzVM clazzVM) throws Exception {
 		// TODO Auto-generated method stub
-		if (clazz.getId()!=null) {
-			clazzMapper.updateByPrimaryKeyWithBLOBs(clazz);
+		if (clazzVM.getId()!=null) {
+			clazzVMMapper.updateByPrimaryKeyWithBLOBs(clazzVM);
 			}else {
-				clazzMapper.insert(clazz);
+				clazzVMMapper.insert(clazzVM);
 			}
 	}
 
@@ -68,6 +68,8 @@ public class ClazzServiceImpl implements IClazzService{
 	public List<ClazzVM> findAllClazzVM() throws Exception {
 		return clazzVMMapper.SelectAll();
 	}
+
+	
 
 
 	

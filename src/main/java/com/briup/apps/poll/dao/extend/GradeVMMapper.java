@@ -6,4 +6,5 @@ import com.briup.apps.poll.bean.extend.GradeVM;
 
 public interface GradeVMMapper {
 	List<GradeVM> SelectAll();
+	
 }
