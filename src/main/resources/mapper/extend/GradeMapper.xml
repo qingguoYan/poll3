@@ -5,6 +5,14 @@
 		select * from poll_grade
 		<!-- id,name,description,school_id -->
 	</select>
+	<select id="selectByPrimaryKey" parameterType="long" resultMap="GradeVMMapper">
+		select * from poll_grade
+		where id=#{id}
+	</select>
+	<select id="selectByExampleWithBLOBs" resultMap="GradeVMMapper">
+		select * from poll_grade
+		where descriptioin like CONCAT('%', #{text},'%')
+	</select>
 	<!--
 		定义结果集
 	-->
