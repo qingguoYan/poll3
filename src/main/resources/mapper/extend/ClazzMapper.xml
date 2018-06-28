@@ -32,23 +32,7 @@
 		select="com.briup.apps.poll.dao.UserMapper.selectByPrimaryKey">
 		</association>
 	</resultMap>
-	 <!-- 
-	 <select id="selectByPrimaryKey" resultMap="ClazzVMMapper">
-    	select * from poll_clazz where id=#{id}
- 	 </select>
- 	 <resultMap type="com.briup.apps.poll.bean.extend.ClazzVM" id="ClazzVMMapper">
-		<id column="id" property="id"/>
-		<result column="name" property="name"/>
-		<result column="description" property="description"/>
-		<association 
-		column="grade_id" property="grade"
-		select="com.briup.apps.poll.dao.GradeMapper.selectByPrimaryKey">
-		</association>
-		<association 
-		column="charge_id" property="charge"
-		select="com.briup.apps.poll.dao.UserMapper.selectByPrimaryKey">
-		</association>
-	</resultMap> -->
+	
 	
   
 	
