@@ -6,6 +6,8 @@ import com.briup.apps.poll.bean.Question;
 import com.briup.apps.poll.bean.extend.QuestionVM;
 
 public interface IQuestionService {
+	//查找出所有问题
+	 List<Question> findAllQuestion() throws Exception;
 	//查找所有问题，并查找出问题的所有选项
 	 List<QuestionVM> findAll() throws Exception; 
 	 

@@ -49,8 +49,8 @@ public class QuestionController {
 	}
 	
 	@ApiOperation(value="查找所有问题",notes="并查找出所有问题的选项")
-	@GetMapping("findAllQuestion")
-	public MsgResponse findAllQuestion(){
+	@GetMapping("findAllQuestionVM")
+	public MsgResponse findAllQuestionVM(){
 		try{
 			 List<QuestionVM> list=questionService.findAll();
 			 return MsgResponse.success("success", list);
@@ -83,5 +83,17 @@ public class QuestionController {
 				return MsgResponse.error(e.getMessage());
 			}	
 		}
+	
+	@ApiOperation(value="查找所有问题",notes="不包括问题选项")
+	@PostMapping("findAllQuestion")
+	public MsgResponse findAllQuestion(){
+		try{
+			List<Question> list=questionService.findAllQuestion();
+			return MsgResponse.success("success", list);
+		}catch(Exception e){
+			e.printStackTrace();
+			return MsgResponse.error(e.getMessage());
+		}
 	}
+   }
 

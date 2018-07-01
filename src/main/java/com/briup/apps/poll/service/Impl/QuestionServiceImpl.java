@@ -105,6 +105,11 @@ public class QuestionServiceImpl implements IQuestionService {
 			questionMapper.deleteByPrimaryKey(id);
 		}
 		
+	}
+	@Override
+	public List<Question> findAllQuestion() throws Exception {
+		QuestionExample example=new QuestionExample();
+		return questionMapper.selectByExample(example);
 	}	
 	
 }
